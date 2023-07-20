@@ -8,6 +8,8 @@ WORKDIR /usr/src/app/vite-react
 
 COPY package*.json ./
 
+ENV PATH /app/node_modules/.bin:$PATH
+
 ADD . .
 
 RUN npm install 

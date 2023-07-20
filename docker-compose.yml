@@ -6,6 +6,9 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - ./:/app
+      - .:/usr/src/app/vite-react-app
+      - /usr/src/app/vite-react-app/node_modules
     ports:
       - '3000:3000'
+    environment:
+      - WATCHPACK_POLLING=true
