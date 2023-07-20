@@ -8,7 +8,11 @@ function App() {
 		{ id: nanoid(8), content: 'item-2' },
 		{ id: nanoid(8), content: 'item-3' },
 	]);
-	console.log(todoList);
+
+	function deleteTodo () {
+
+	}
+
 	return (
 		<>
 			<div className="h-screen bg-slate-900">
@@ -24,7 +28,10 @@ function App() {
 						</button>
 					</form>
 					<ul>
-						<ListItem />
+						{todoList.map(item => (
+							<ListItem key={item.id} itemData={item} deleteTodo={deleteTodo} 
+							/>
+						))}
 					</ul>
 				</div>
 			</div>
