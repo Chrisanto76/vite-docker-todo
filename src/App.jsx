@@ -1,9 +1,12 @@
 import { useState } from 'react';
 import { nanoid } from 'nanoid';
+import ListItem from './components/ListItem';
 
 function App() {
 	const [todoList, setTodoList] = useState([
 		{ id: nanoid(8), content: 'item-1' },
+		{ id: nanoid(8), content: 'item-2' },
+		{ id: nanoid(8), content: 'item-3' },
 	]);
 	console.log(todoList);
 	return (
@@ -20,7 +23,9 @@ function App() {
 							Add
 						</button>
 					</form>
-					<ul></ul>
+					<ul>
+						<ListItem />
+					</ul>
 				</div>
 			</div>
 		</>
