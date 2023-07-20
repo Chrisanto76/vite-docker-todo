@@ -1,13 +1,11 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { nanoid } from 'nanoid';
 
 function App() {
-
 	const [todoList, setTodoList] = useState([
-		{id: nanoid(8), content: "item-1"}
-	])
-	console.log(todoList)
+		{ id: nanoid(8), content: 'item-1' },
+	]);
+	console.log(todoList);
 	return (
 		<>
 			<div className="h-screen bg-slate-900">
@@ -17,22 +15,15 @@ function App() {
 						<label htmlFor="todo-item" className="text-slate-50">
 							Add something
 						</label>
-						<input type="text" className='mt-1 block w-full rounded'/>
-						<button className='mt-4 py-2 px-2 bg-slate-50 rounded min-w-[115px]'>Add</button>
+						<input type="text" className="mt-1 block w-full rounded" />
+						<button className="mt-4 py-2 px-2 bg-slate-50 rounded min-w-[115px]">
+							Add
+						</button>
 					</form>
-					<ul>
-
-					</ul>
+					<ul></ul>
 				</div>
 			</div>
-=======
-function App() {
-	return (
-		<>
-			<h1>hello toto</h1>
->>>>>>> ae265eb1698482760c1589653dd971ba14e8a663
 		</>
 	);
 }
-
 export default App;
