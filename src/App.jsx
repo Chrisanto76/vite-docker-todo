@@ -1,35 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import { nanoid } from 'nanoid';
 
 function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+	const [todoList, setTodoList] = useState([
+		{id: nanoid(8), content: "item-1"}
+	])
+	console.log(todoList)
+	return (
+		<>
+			<div className="h-screen bg-slate-900">
+				<div className="max-w-4xl mx-auto pt-20 px-16">
+					<h1 className="text-3xl text-slate-100 mb-4">To-do List</h1>
+					<form className="mb-10">
+						<label htmlFor="todo-item" className="text-slate-50">
+							Add something
+						</label>
+						<input type="text" className='mt-1 block w-full rounded'/>
+						<button className='mt-4 py-2 px-2 bg-slate-50 rounded min-w-[115px]'>Add</button>
+					</form>
+					<ul>
+
+					</ul>
+				</div>
+			</div>
+		</>
+	);
 }
 
-export default App
+export default App;
