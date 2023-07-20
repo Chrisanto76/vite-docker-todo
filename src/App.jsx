@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import { nanoid } from 'nanoid';
 
@@ -24,6 +25,12 @@ function App() {
 					</ul>
 				</div>
 			</div>
+=======
+function App() {
+	return (
+		<>
+			<h1>hello toto</h1>
+>>>>>>> ae265eb1698482760c1589653dd971ba14e8a663
 		</>
 	);
 }
