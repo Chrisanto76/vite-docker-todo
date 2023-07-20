@@ -10,7 +10,7 @@ COPY package*.json ./
 
 ADD . .
 
-RUN npm install
+RUN npm install 
 
 EXPOSE 3000
 
